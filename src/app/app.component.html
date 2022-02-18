@@ -100,6 +100,7 @@
       </mat-card>
     </div>
 
+    <!-- Result -->
     <div *ngIf="result" class="result"
       [ngClass]="{'winner': (result == 'You Won'), 'lost' : (result == 'Computer Won') }">{{result}}</div>
   </div>

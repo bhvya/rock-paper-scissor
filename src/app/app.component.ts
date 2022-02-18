@@ -17,6 +17,7 @@ export class AppComponent {
   playerTwoSelection!: string;
   result!: string;
 
+  // On button click - Play with computer
   playWithComputer() {
     if (!this.playerOne) {
       this.nameWarning = true;
@@ -27,6 +28,7 @@ export class AppComponent {
     }
   }
 
+  // Player 1 selection
   pick(selectedOption: string) {
     this.playerOneSelection = selectedOption;
     this.computersPick();
@@ -35,12 +37,14 @@ export class AppComponent {
     console.log(this.playerTwoSelection);
   }
 
+  // Computer Player Selection
   computersPick() {
     const gameOptions = ['rock', 'paper', 'scissor'];
     const randomSelection = Math.floor(Math.random() * 3);
     this.playerTwoSelection = gameOptions[randomSelection];
   }
 
+  // Select Winner
   winner() {
     // if (this.playerOneSelection === this.playerTwoSelection) {
     //   this.result = "It's a Tie";
